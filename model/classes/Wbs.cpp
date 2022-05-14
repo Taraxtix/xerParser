@@ -4,7 +4,7 @@
 Wbs::Wbs(const std::string header[], const std::string params[]){
     tsv = "%R\t";
     for (int i = 0; i < header->length(); i++){
-        if(header[i].empty()) break;
+        if(header[i].empty()) continue;
         if (header[i] == "wbs_id"){
             wbs_id = stoi(params[i]);
         } else if (header[i] == "proj_id") {
