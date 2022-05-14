@@ -7,6 +7,6 @@
 
 #include "Reader.h"
 
-void writeXER(const Reader& reader, const std::string& filename);
+void writeXER(Reader reader, const std::string& filename);
 
 #endif //XERPARSER_WRITER_H

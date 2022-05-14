@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Reader.h"
+#include "Writer.h"
 
 using namespace std;
 
@@ -7,9 +8,11 @@ int main()
 {
     Reader reader;
 
-    reader.parse("/home/hassan/programming/xerParser/wk2.xer");
+    reader.parse("../sample.xer");
 
-    for (Udf udf : reader.udfs.getByProject(368))
+		writeXER(reader, "../out.xer");
+
+    /*for (Udf udf : reader.udfs.getByProject(368))
     {
         cout << udf.get_tsv() << std::endl;
     }
@@ -47,5 +50,5 @@ int main()
         {
             cout << to_string(tr.rsrc_id) << " => " << to_string(tr.task_id) << endl;
         }
-    }
+    }*/
 }

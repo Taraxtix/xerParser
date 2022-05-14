@@ -4,7 +4,7 @@
 
 #include "Writer.h"
 
-void writeXER(const Reader& reader, const std::string& filename){
+void writeXER(Reader reader, const std::string& filename){
 	std::ofstream fout(filename);
 	if(not fout.is_open()){
 		fprintf(stderr,  "Error while opening the file");

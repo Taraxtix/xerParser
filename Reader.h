@@ -69,7 +69,7 @@ public:
 		Tasks tasks;
 
 	private:
-		static void split(std::string *strings, const std::string &str);
+		static void split(std::string strings[], const std::string &str);
 
 		void add(const std::string& table, const std::string *header, const std::string *record);
 };
