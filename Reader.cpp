@@ -34,7 +34,8 @@ int Reader::parse(const std::string &filename)
 
 		while (getline(fin, line))
 		{
-			line.replace(line.find('\r'), 1, "");
+			size_t i = line.find('\r');
+			if(i < line.length()){ line.replace(i, 1, ""); }
 			// Split line into tab-separated parts
 			std::string parts[MAX_HEADER_LEN] = {""};
 			split(parts, line);
