@@ -10,7 +10,7 @@ Actvtype::Actvtype(const std::string header[], const std::string params[]){
 	std::string seq_num_str;
 	std::string actv_short_len_str;
 
-	tsv = "";
+	tsv = "%R\t";
 
 	for(uint i = 0; i < header->length(); i++){
 		if(header[i].empty()) break;

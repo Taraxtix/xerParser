@@ -34,6 +34,7 @@ int Reader::parse(const std::string &filename)
 
 		while (getline(fin, line))
 		{
+			line.replace(line.find('\r'), 1, "");
 			// Split line into tab-separated parts
 			std::string parts[MAX_HEADER_LEN] = {""};
 			split(parts, line);
@@ -78,118 +79,118 @@ void Reader::add(const std::string &table, const std::string *header, const std:
 {
 	assert(not(table.empty() || header == nullptr || record == nullptr));
 
-	if (table == "ACCOUNT\r")
+	if (table == "ACCOUNT")
 	{
 		accounts.add(Account(header, record));
 	}
-	else if (table == "ACTVCODE\r")
+	else if (table == "ACTVCODE")
 	{
 		actvcodes.add(Actvcode(header, record));
 	}
-	else if (table == "ACTVTYPE\r")
+	else if (table == "ACTVTYPE")
 	{
 		actvtypes.add(Actvtype(header, record));
 	}
-	else if (table == "CALENDAR\r")
+	else if (table == "CALENDAR")
 	{
 		calendars.add(Calendar(header, record));
 	}
-	else if (table == "PROJWBS\r")
+	else if (table == "PROJWBS")
 	{
 		wbss.add(Wbs(header, record));
 	}
-	else if (table == "UDFVALUE\r")
+	else if (table == "UDFVALUE")
 	{
 		udfs.add(Udf(header, record));
 	}
-	else if (table == "UDFTYPE\r")
+	else if (table == "UDFTYPE")
 	{
 		udftypes.add(UDFType(header, record));
 	}
-	else if (table == "ROLE\r")
+	else if (table == "ROLE")
 	{
 		roles.add(Role(header, record, this));
 	}
-	else if (table == "CURRTYPE\r")
+	else if (table == "CURRTYPE")
 	{
 		currencies.add(Currtype(header, record));
 	}
-	else if (table == "RCATTYPE\r")
+	else if (table == "RCATTYPE")
 	{
 		rCatTypes.add(RCatType(header, record));
 	}
-	else if (table == "RCATVAL\r")
+	else if (table == "RCATVAL")
 	{
 		rCatValues.add(RCatValue(header, record));
 	}
-	else if (table == "ROLERATE\r")
+	else if (table == "ROLERATE")
 	{
 		roleRates.add(RoleRate(header, record));
 	}
-	else if (table == "TASKRSRC\r")
+	else if (table == "TASKRSRC")
 	{
 		taskRsrcs.add(TaskRsrc(header, record));
 	}
-	else if (table == "OBS\r")
+	else if (table == "OBS")
 	{
 		obss.add(Obs(header, record));
 	}
-	else if (table == "NONWORK\r")
+	else if (table == "NONWORK")
 	{
 		nonWorks.add(NonWork(header, record));
 	}
-	else if (table == "FINTMPL\r")
+	else if (table == "FINTMPL")
 	{
 		fintmpls.add(Fintmpl(header, record));
 	}
-	else if (table == "PCATTYPE\r")
+	else if (table == "PCATTYPE")
 	{
 		pcattypes.add(Pcattype(header, record));
 	}
-	else if (table == "PCATVAL\r")
+	else if (table == "PCATVAL")
 	{
 		pcatvals.add(Pcatval(header, record));
 	}
-	else if (table == "TASKPRED\r")
+	else if (table == "TASKPRED")
 	{
 		taskpreds.add(Taskpred(header, record));
 	}
-	else if (table == "PROJPCAT\r")
+	else if (table == "PROJPCAT")
 	{
 		projpcats.add(Projpcat(header, record));
 	}
-	else if (table == "PROJECT\r")
+	else if (table == "PROJECT")
 	{
 		projects.add(Project(header, record));
 	}
-	else if (table == "RSRC\r")
+	else if (table == "RSRC")
 	{
 		rsrcs.add(Rsrc(header, record, this));
 	}
-	else if (table == "RSRCRCAT\r")
+	else if (table == "RSRCRCAT")
 	{
 		rsrcrcats.add(Rsrcrcat(header, record));
 	}
-	else if (table == "RSRCCURVDATA\r")
+	else if (table == "RSRCCURVDATA")
 	{
 		rsrccurvdatas.add(Rsrccurvdata(header, record));
 	}
-	else if (table == "RSRCRATE\r")
+	else if (table == "RSRCRATE")
 	{
 		rsrcrates.add(Rsrcrate(header, record));
 	}
-	else if (table == "SCHEDOPTION\r")
+	else if (table == "SCHEDOPTION")
 	{
 		schedoptions.add(Schedoption(header, record));
 	}
-	else if (table == "TASKACTV\r")
+	else if (table == "TASKACTV")
 	{
 		taskactvs.add(Taskactv(header, record));
 	}
-	else if (table == "TASKPROC\r")
+	else if (table == "TASKPROC")
 	{
 		taskprocs.add(Taskproc(header, record));
-	}else if (table == "TASK\r")
+	}else if (table == "TASK")
 	{
 		tasks.add(Task(header, record));
 	}

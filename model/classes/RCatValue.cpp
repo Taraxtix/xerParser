@@ -29,7 +29,7 @@ RCatValue::RCatValue(const std::string header[], const std::string params[]){
 }
 
 std::string RCatValue::get_tsv(){
-    tsv = "";
+    tsv = "%R\t";
     tsv.append(std::to_string(rsrc_catg_id).append("\t"))
         .append(std::to_string(rsrc_catg_type_id)).append("\t")
         .append(rsrc_catg_short_name).append("\t")

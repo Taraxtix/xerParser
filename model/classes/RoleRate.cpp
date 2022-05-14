@@ -36,7 +36,7 @@ RoleRate::RoleRate(const std::string header[], const std::string params[]){
 }
 
 std::string RoleRate::get_tsv(){
-    tsv = "";
+    tsv = "%R\t";
     tsv.append(std::to_string(role_rate_id)).append("\t")
         .append(std::to_string(role_id)).append("\t")
         .append(std::to_string(cost_per_qty)).append("\t")

@@ -49,14 +49,14 @@ Currtype::Currtype(const std::string header[], const std::string params[]){
             }
         } else if (header[i] == "base_exch_rate"){
             if(!params[i].empty()){
-                base_exch_rate = stod(params[i]);
+                base_exch_rate = stof(params[i]);
             }
         }  
     } 
 }
 
 std::string Currtype::get_tsv() {
-    tsv = "";
+    tsv = "%R\t";
     tsv.append(std::to_string(curr_id)).append("\t")
         .append(std::to_string(decimal_digit_cnt)).append("\t")
         .append(curr_symbol).append("\t")

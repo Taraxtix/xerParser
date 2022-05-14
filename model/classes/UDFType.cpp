@@ -26,7 +26,7 @@ UDFType::UDFType(const std::string header[], const std::string params[]){
 }
 
 std::string UDFType::get_tsv(){
-    tsv = "";
+    tsv = "%R\t";
     tsv.append(std::to_string(udf_type_id)).append("\t")
         .append(table_name).append("\t")
         .append(udf_type_name).append("\t")

@@ -5,7 +5,7 @@
 #include "Obs.h"
 
 Obs::Obs(const std::string *header, const std::string *params){
-	tsv = "";
+	tsv = "%R\t";
 	for (uint i = 0; i < header->size(); i++) {
 		if (header[i] == "obs_id"){ 
 			if(!params[i].empty()){

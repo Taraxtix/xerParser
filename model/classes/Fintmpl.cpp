@@ -5,7 +5,7 @@
 #include "Fintmpl.h"
 
 Fintmpl::Fintmpl(const std::string *header, const std::string *params){
-	tsv = "";
+	tsv = "%R\t";
 	for(uint i = 0; i < header->length(); i++){
 		if(header[i] == "fintmpl_id"){ 
 			if(!params[i].empty()){

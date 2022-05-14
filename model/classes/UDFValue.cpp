@@ -31,7 +31,7 @@ UDFValue::UDFValue(const std::string header[], const std::string params[]){
 }
 
 std::string UDFValue::get_tsv(){
-    tsv = "";
+    tsv = "%R\t";
     tsv.append(std::to_string(udf_code_id)).append("\t")
         .append(std::to_string(fk_id)).append("\t")
         .append(std::to_string(proj_id)).append("\t")

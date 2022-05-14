@@ -24,7 +24,7 @@ RCatType::RCatType(const std::string header[], const std::string params[]){
 }
 
 std::string RCatType::get_tsv(){
-    tsv = "";
+    tsv = "%R\t";
     tsv.append(std::to_string(rsrc_catg_short_len)).append("\t")
         .append(rsrc_catg_type).append("\t")
         .append(std::to_string(rsrc_catg_type_id)).append("\t")

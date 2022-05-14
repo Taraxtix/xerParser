@@ -1,7 +1,7 @@
 #include "Udf.h"
 
 Udf::Udf(const std::string header[], const std::string params[]){
-	tsv = "";
+	tsv = "%R\t";
 	for (int i = 0; i < header->length(); i++){
 		if(header[i] == "udf_code_id"){
 			if(!params[i].empty()){

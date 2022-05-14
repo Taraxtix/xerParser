@@ -38,7 +38,7 @@ Role::Role(const std::string header[], const std::string params[], Reader *reade
 }
 
 std::string Role::get_tsv(){
-    tsv = "";
+    tsv = "%R\t";
     tsv.append(std::to_string(role_id)).append("\t")
         .append(std::to_string(parent_role_id)).append("\t")
         .append(std::to_string(seq_num)).append("\t")

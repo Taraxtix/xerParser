@@ -6,7 +6,7 @@
 
 Rsrccurvdata::Rsrccurvdata(const std::string *header, const std::string *params)
 {
-	tsv = "";
+	tsv = "%R\t";
 	for (uint i = 0; i < params->length(); i++)
 	{
 		if (header[i] == "curv_id")

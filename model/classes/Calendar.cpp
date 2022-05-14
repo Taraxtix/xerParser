@@ -11,7 +11,7 @@ Calendar::Calendar(const std::string header[], const std::string params[]){
 	std::string month_hr_cnt_str;
 	std::string year_hr_cnt_str;
 
-	tsv = "";
+	tsv = "%R\t";
 
 	for(uint i = 0; i < header->length(); i++){
 		if(header[i].empty()) break;

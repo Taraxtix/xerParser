@@ -1,9 +1,8 @@
 #include "Wbs.h"
 
-
 // TODO: Convert string types to dates anticip_start_date & anticip_end_date
 Wbs::Wbs(const std::string header[], const std::string params[]){
-    tsv = "";
+    tsv = "%R\t";
     for (int i = 0; i < header->length(); i++){
         if(header[i].empty()) break;
         if (header[i] == "wbs_id"){

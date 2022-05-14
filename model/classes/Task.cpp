@@ -5,7 +5,7 @@
 #include "Task.h"
 
 Task::Task(const std::string *header, const std::string *params){
-	tsv = "";
+	tsv = "%R\t";
 	for(uint i = 0; i < params->length(); i++){
 		if(header[i] == "task_id"){ task_id = stoi(params[i]);}
 		else if(header[i] == "proj_id"){ proj_id = stoi(params[i]);}

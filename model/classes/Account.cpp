@@ -9,7 +9,7 @@ Account::Account(const std::string header[], const std::string params[]){
 	std::string acct_seq_num_str;
 	std::string parent_acct_id_str;
 
-	tsv = "";
+	tsv = "%R\t";
 
 	for(uint i = 0; i < header->length(); i++){
 		if(header[i].empty()) break;

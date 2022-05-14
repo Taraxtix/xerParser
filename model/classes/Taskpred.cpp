@@ -6,7 +6,7 @@
 
 Taskpred::Taskpred(const std::string *header, const std::string *params)
 {
-	tsv = "";
+	tsv = "%R\t";
 	for (uint i = 0; i < params->size(); i++)
 	{
 		if (header[i] == "task_pred_id")

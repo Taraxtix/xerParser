@@ -5,7 +5,7 @@
 #include "TaskRsrc.h"
 
 TaskRsrc::TaskRsrc(const std::string header[], const std::string params[]){
-	tsv = "";
+	tsv = "%R\t";
 	for(uint i = 0; i < header->length(); i++){
 		if(header[i] == "taskrsrc_id"){ 
 			if(!params[i].empty()){

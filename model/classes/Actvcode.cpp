@@ -10,7 +10,7 @@ Actvcode::Actvcode(const std::string header[], const std::string params[]){
 	std::string parent_actv_code_id_str;
 	std::string seq_num_str;
 
-	tsv = "";
+	tsv = "%R\t";
 
 	for(uint i = 0; i < header->length(); i++){
 		if(header[i].empty()) break;
